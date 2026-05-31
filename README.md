@@ -13,11 +13,12 @@ model interpretability.
 
 **Model Performance**
 
-                    | Model | AUC-ROC | Accuracy | F1 (Macro) |
-                    |-------|---------|----------|------------|
-                    | Logistic Regression | 0.9988 | 0.9761 | 0.98 |
-                    | XGBoost | 0.9997 | 0.9907 | 0.99 |
-                    | EBM | 0.9997 | 0.9917 | 0.99 |
+| Model | AUC-ROC | Accuracy | F1 (Macro) |
+|-------|---------|----------|------------|
+| Logistic Regression | 0.9988 | 0.9761 | 0.98 |
+| XGBoost | 0.9997 | 0.9907 | 0.99 |
+| EBM | 0.9997 | 0.9917 | 0.99 |
+
 
 **Feature Importance (EBM)**
 <img width="740" height="671" alt="image" src="https://github.com/user-attachments/assets/882f0724-2047-404a-9731-218179095089" />

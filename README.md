@@ -1,48 +1,40 @@
-For feature_df.csv, please use:https://drive.google.com/file/d/17BUrMVZbdVldUCD0XywkESfPdVw7SCoS/view?usp=sharing this link to download the file. 
+
 # Supply Chain Order Delay Risk Prediction
 
-MSc Thesis — Data Science and Society, Tilburg University (2025)
 
-## Overview
-This thesis compares three machine learning models — Logistic Regression, 
-XGBoost, and Explainable Boosting Machine (EBM) — for predicting order delay 
-risk in supply chains, with a focus on balancing predictive accuracy with 
-model interpretability.
+> 📊 **[Interactive Dashboard (Power BI)](https://app.powerbi.com/view?r=eyJrIjoiOWMyMWMyZTgtZWFlYS00OTRiLTg3NGQtODUxMDgyNjZmNTlhIiwidCI6IjU2M2FmYzRkLWQxZTAtNDRhMy1iYjc0LWMxZTkzN2RlMmVjMyJ9)**　｜　🖼 **[Full Snapshot (PDF)](https://drive.google.com/file/d/14sVRkSL9MOD32upzCbkbCOsrx95OvJgp/view)**　｜　🔍 **[Project Overview Page](你的GitHub Pages链接)**
 
-## Key Findings
+Comparing Logistic Regression, XGBoost, and Explainable Boosting Machine (EBM) for supply chain order delay prediction — with a focus on balancing accuracy and interpretability.
 
-**Model Performance**
+## Key Results
 
-| Model | AUC-ROC | Accuracy | F1 (Macro) |
-|-------|---------|----------|------------|
-| Logistic Regression | 0.9988 | 0.9761 | 0.98 |
-| XGBoost | 0.9997 | 0.9907 | 0.99 |
-| EBM | 0.9997 | 0.9917 | 0.99 |
+| Model | AUC-ROC | Accuracy | F1 (Macro) | FN:FP Ratio |
+|---|---|---|---|---|
+| Logistic Regression | 0.9989 | 97.6% | 0.98 | 0.14 ⚠ |
+| XGBoost | 0.9997 | 99.1% | 0.99 | 0.64 |
+| **EBM** | **0.9998** | **99.3%** | **0.99** | **0.88 ✓** |
 
+EBM matches black-box accuracy while providing full inherent interpretability and the most balanced error distribution.
 
-**Feature Importance (EBM)**
-<img width="740" height="671" alt="image" src="https://github.com/user-attachments/assets/882f0724-2047-404a-9731-218179095089" />
+## Setup
 
+```bash
+pip install -r requirements.txt  # or see library list in notebook
+```
 
-**Error Analysis — Which orders are hardest to predict?**
-<img width="707" height="487" alt="image" src="https://github.com/user-attachments/assets/c5422de7-5924-4f3e-83ff-5c74a1a06121" />
-<img width="889" height="647" alt="image" src="https://github.com/user-attachments/assets/497a4d4e-da80-4102-bd78-126091289a78" />
+**Dataset:** Download `feature_df.csv` from [Google Drive](https://drive.google.com/file/d/17BUrMVZbdVldUCD0XywkESfPdVw7SCoS/view?usp=sharing) and place it in the project root.
 
+## How to Run
 
-- EBM achieved the most balanced error distribution (120 FN vs 106 FP)
-- All models struggle with the same hard cases: Same Day shipments, 
-  Pacific Asia orders, low-profit transactions, PENDING/PROCESSING states
-- Core delay drivers: Shipping Mode, Order Processing Time, Order Status
-
-
-
+Open `DSS-Code.ipynb` and run all cells in order. The notebook covers data preprocessing, model training, evaluation, and error analysis end-to-end.
 
 ## Methods
-- Feature engineering: geolocation (Nominatim API), temporal features, 
-  leakage removal
-- Models: Logistic Regression (baseline), XGBoost, EBM (InterpretML)
-- Interpretability: SHAP (LR & XGBoost), EBM built-in feature importance
-- Error analysis: Venn diagrams, t-SNE projection, t-tests
+
+- **Feature engineering:** geolocation via Nominatim API, temporal decomposition, leakage removal, OOF target encoding
+- **Models:** Logistic Regression (baseline) · XGBoost · EBM (InterpretML)
+- **Interpretability:** SHAP for LR & XGBoost · EBM built-in feature contribution curves
+- **Error analysis:** Venn diagrams · t-SNE projection · t-tests on misclassified samples
 
 ## Tools
-Python · scikit-learn · XGBoost · InterpretML · SHAP · pandas · matplotlib
+
+Python 3.10 · scikit-learn · XGBoost · InterpretML · SHAP · pandas · matplotlib · geopy

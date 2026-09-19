@@ -2,7 +2,7 @@
 # Supply Chain Order Delay Risk Prediction
 
 
-> 📊 **[Interactive Dashboard (Power BI)](https://app.powerbi.com/view?r=eyJrIjoiOWMyMWMyZTgtZWFlYS00OTRiLTg3NGQtODUxMDgyNjZmNTlhIiwidCI6IjU2M2FmYzRkLWQxZTAtNDRhMy1iYjc0LWMxZTkzN2RlMmVjMyJ9)**　｜　🖼 **[Full Snapshot (PDF)](https://drive.google.com/file/d/14sVRkSL9MOD32upzCbkbCOsrx95OvJgp/view)**　｜　🔍 **[Project Overview Page]([你的GitHub Pages链接](https://erinli2025.github.io/thesis_portfolio/))**
+> 📊 **[Interactive Dashboard (Power BI)](https://app.powerbi.com/view?r=eyJrIjoiOWMyMWMyZTgtZWFlYS00OTRiLTg3NGQtODUxMDgyNjZmNTlhIiwidCI6IjU2M2FmYzRkLWQxZTAtNDRhMy1iYjc0LWMxZTkzN2RlMmVjMyJ9)**　｜　🖼 **[Full Snapshot (PDF)](https://drive.google.com/file/d/14sVRkSL9MOD32upzCbkbCOsrx95OvJgp/view)**　｜　🔍 **[Project Overview Page](https://erinli2025.github.io/thesis_portfolio/)**
 
 Comparing Logistic Regression, XGBoost, and Explainable Boosting Machine (EBM) for supply chain order delay prediction — with a focus on balancing accuracy and interpretability.
 
